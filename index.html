@@ -491,6 +491,90 @@
       margin-top: 1px;
     }
 
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card-strong), rgba(255, 255, 255, 0.045));
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(18px);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stars {
+      color: var(--accent-soft);
+      font-size: 1.18rem;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .review-text {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .review-author {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .review-author strong {
+      display: block;
+      letter-spacing: -0.02em;
+    }
+
+    .review-author span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .rating-summary {
+      border: 1px solid rgba(214, 168, 79, 0.28);
+      border-radius: var(--radius);
+      background: rgba(214, 168, 79, 0.09);
+      padding: 28px;
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .rating-score {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.07em;
+      color: var(--accent-soft);
+    }
+
+    .rating-summary p {
+      color: var(--muted);
+    }
+
+    .rating-badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
     .contact-section {
       padding-bottom: 96px;
     }
@@ -619,6 +703,15 @@
         grid-template-columns: 1fr;
       }
 
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rating-summary {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
       .nav-links {
         display: none;
       }
@@ -682,6 +775,7 @@
         <a href="#services">Services</a>
         <a href="#workflow">Workflow</a>
         <a href="#scope">Professional Scope</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -860,6 +954,60 @@
               <li>No personalized investment recommendations.</li>
               <li>No execution of investments on behalf of third parties.</li>
             </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="page-shell">
+        <div class="section-head">
+          <div class="section-kicker">Client valorations</div>
+          <h2>Trusted by students and digital learners.</h2>
+          <p>Sample client feedback layout for the website. Replace these texts with real testimonials when you have approved client reviews.</p>
+        </div>
+
+        <div class="rating-summary">
+          <div class="rating-score">4.9</div>
+          <div>
+            <div class="stars" aria-label="Average rating 4.9 out of 5">★★★★★</div>
+            <p>Average satisfaction score based on coaching, educational clarity, digital learning structure, and remote communication quality.</p>
+          </div>
+          <div class="rating-badge">Excellent experience</div>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“The sessions were clear, structured, and easy to follow. The content helped me understand financial concepts without feeling overwhelmed.”</p>
+            <div class="review-author">
+              <div>
+                <strong>International Student</strong>
+                <span>James</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Yoel explains complex topics in a practical way. The learning materials, calls, and follow-up structure made the process feel professional.”</p>
+            <div class="review-author">
+              <div>
+                <strong>Joan</strong>
+                <span>Financial awareness training</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Very good remote experience. The program combines mindset, personal orientation, and financial education in a simple and useful format.”</p>
+            <div class="review-author">
+              <div>
+                <strong>Dídac</strong>
+                <span>Group training session</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
